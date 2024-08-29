@@ -16,6 +16,8 @@ namespace HotReloader;
  */
 class HotReloader {
 
+    private $WATCHER_FILE_URL;
+
     /**
      * Simple constructor method containing the class params.
      * Automatically starts the Hot Reloader.
