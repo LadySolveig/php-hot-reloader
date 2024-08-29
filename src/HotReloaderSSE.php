@@ -38,16 +38,15 @@
     ob_end_clean();
     set_time_limit(0);
 
-    ini_set('auto_detect_line_endings', 1);
-    ini_set('mysql.connect_timeout','7200');
-    ini_set('max_execution_time', '0');
-
     header('Cache-Control: no-cache');
     header("Access-Control-Allow-Origin: *");
     header('Content-Type: text/event-stream');
     header('Access-Control-Allow-Methods: GET');
     header('Access-Control-Expose-Headers: X-Events');
 
+    ini_set('auto_detect_line_endings', 1);
+    ini_set('mysql.connect_timeout','7200');
+    ini_set('max_execution_time', '0');
 
 	function send_message ($message) {
         echo "data: " . json_encode($message) . PHP_EOL;
