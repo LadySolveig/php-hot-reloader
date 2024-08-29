@@ -81,7 +81,7 @@ class DiffChecker {
    * @return array
    */
   private function getGitFiles ($repo_path) {
-    $git_files = shell_exec('cd ' . $repo_path . '; git ls-files -m -o 2>&1');
+    $git_files = shell_exec('cd ' . $repo_path . '; git ls-files -m 2>&1');
     return explode(PHP_EOL, $git_files);
   }
 
